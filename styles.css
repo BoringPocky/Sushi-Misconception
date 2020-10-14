@@ -1,0 +1,96 @@
+@font-face {
+    /* FOR TITLE/ HEADING */
+    font-family: 'DoHyeon-Regular';
+    src: local('DoHyeon-Regular'), url(assets/fonts/DoHyeon-Regular.ttf), format('ttf');
+}
+
+
+@font-face {
+    /* FOR CONTENTS */
+    font-family: 'GothicA1-Regular';
+    src: local('GothicA1-Regular'), url(assets/fonts/GothicA1-Regular.ttf), format('ttf');
+}
+
+body{
+    
+    font-family: 'GothicA1-Regular', sans-serif;
+    align-content: center;
+    text-align: center;
+    background-image: url(assets/pictures/bg/websiteBackground.png);
+}
+
+
+/* This is where the heading of the website stay */
+
+
+    .button, .button:active  {
+        cursor: pointer;
+        margin-left: 110px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        color:#ebebeb;
+        background-color:#0d3a5f;
+        border:none;
+        margin-bottom: -20px;
+    }
+    .button:focus {outline: none;}
+
+
+main{
+    font-family:'GothicA1-Regular', 'sans-serif' ;
+    align-content: center; 
+    margin:20px 370px ;
+    padding: 20px 40px 30px 40px;
+    background-color:#f4e7d3;
+    color:#363636; 
+}
+.heading{
+    font-family: 'DoHyeon-Regular', sans-serif;
+    font-size: 30px;
+
+}
+
+.content{
+    font-family: 'GothicA1-Regular', sans-serif;
+    text-align: left;
+}
+
+
+/* LINKING */
+a{
+    font-family:'DoHyeon-Regular','san-serif' ;
+    font-size: 20px;
+    margin:10px 2px 20px 2px ;
+
+    background-color:#cd543b;
+    color:#ebebeb;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    transition: 1s all;
+
+ 
+  }
+  
+a:hover {
+    font-size: 24px;
+    color: #cd543b;
+    font-weight: bold;
+    background-color:#363636;
+    border-radius: 25px;
+    border: 5px solid #cd543b;
+    margin-bottom: 10px;
+    margin-top: -1px;
+    margin-bottom: 30px;
+    transition: 0.5s all;
+  }
+
+
+
+/*  Roboto = title, OpenSan = content */
+/* colour for website WHITE COLOUR #ebebeb, CREAM COLOUR #f4e7d3, RED COLOUR #cd543b, BLACK COLOUR #363636, BLUE COLOUR #0d3a5f */
+
+

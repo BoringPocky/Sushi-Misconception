@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Sushi origin misconception</title>
+	<link rel='shortcut icon' href='favicon/homeFavicon.ico' type='image/x-icon' />
+	<meta charset="UTF-8">
+	<meta name="description" content="My Page">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<!-- Link JQuery -->
+	<script src="jquery.js"></script>
+</head>
+
+<body id="bg" onload="myFunction()" style="margin:0;">
+	<img id="loader" src="assets/pictures/Sushi/spacer.gif" alt=""></div>
+
+	<header></header>
+
+
+	<main id="myDiv" class="animate-bottom">
+
+		<img class="origin" src="assets/pictures/Contents/sushiOrigin.png" title="Sushi Origin" alt="Sushi Origin"
+			onclick="window.location.href = 'historyOfSushi.html'" style="cursor: pointer;">
+
+
+		<div title="Sushi Timeline" class="sushiTrain" onclick="window.location.href = 'SushiTimeline.html'"></div>
+
+	</main>
+
+	<footer></footer>
+
+</body>
+
+
+
+</html>
+
+<style>
+	/* TYPEFACE */
+	@font-face {
+		/* FOR TITLE/ HEADING */
+		font-family: 'DoHyeon-Regular';
+		src: local('DoHyeon-Regular'), url(assets/fonts/DoHyeon-Regular.ttf), format('ttf');
+	}
+
+
+	@font-face {
+		/* FOR CONTENTS */
+		font-family: 'GothicA1-Regular';
+		src: local('GothicA1-Regular'), url(assets/fonts/GothicA1-Regular.ttf), format('ttf');
+	}
+
+	#loader {
+		position: absolute;
+		left: 0%;
+		top: 50%;
+		z-index: 1;
+		width: 150px;
+		height: 150px;
+		margin: -75px 0 0 -75px;
+		animation: spin 2s linear infinite;
+	}
+
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+			left: 10%;
+
+		}
+
+		100% {
+			left: 100%;
+			transform: rotate(360deg);
+		}
+	}
+
+	#myDiv {
+		display: none;
+		text-align: center;
+	}
+
+
+
+	body {
+		overflow: hidden;
+		text-align: center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+		animation: body 4s linear forwards;
+	}
+
+	@keyframes body {
+		0% {
+			background-color: #ffcc7b;
+		}
+
+		50% {
+			background-color: #ffcc7b;
+		}
+
+		100% {
+			background-image: url('assets/pictures/bg/homebg.png');
+		}
+	}
+
+	.origin {
+		align-items: center;
+		justify-content: center;
+		border: 25px solid #363636;
+		margin-top: 10%;
+		height: auto;
+		width: 25%;
+		transition: 1s all;
+	}
+
+	.origin:hover {
+		content: url(assets/pictures/Contents/sushiOriginHover.png);
+		width: 27%;
+		margin-top: 8.5%;
+		transition: 0.5s all;
+	}
+
+	.sushiTrain {
+		cursor: pointer;
+		margin-top: -1%;
+		position: relative;
+		background: url(assets/pictures/bg/sushiTimeline.png);
+		height: 40vh;
+		background-size: cover;
+		background-position: 0 0;
+		background-repeat: repeat-x;
+		animation: train 20s linear infinite;
+		transition: 1s all;
+	}
+
+	.sushiTrain:hover {
+		height: 43vh;
+		margin-top: -2.5%;
+		transition: 0.75s all;
+	}
+
+	@keyframes train {
+		from {
+			background-position: 100% 0;
+		}
+
+		to {
+			background-position: 0 0;
+		}
+	}
+
+	/*  DoHyeon = title, GothicA = content */
+	/* colour for website YELLOW COLOUR #ffcc7b, WHITE COLOUR #ebebeb, CREAM COLOUR #f4e7d3, RED COLOUR #cd543b, BLACK COLOUR #363636, BLUE COLOUR #0d3a5f */
+</style>
+
+<script>
+	var myVar = new Array("assets/pictures/Sushi/Maki sushi.png", "assets/pictures/Sushi/Oshi Sushi.png", "assets/pictures/Sushi/Uramaki.png",
+		"assets/pictures/Sushi/Haya-zushi.png", "assets/pictures/Sushi/Gunkan-maki.png", "assets/pictures/Sushi/Temari sushi.png",
+		"assets/pictures/Sushi/Chirashizushi.png", "assets/pictures/Sushi/Temaki.png");
+
+	function myFunction() {
+		var randomNum = Math.floor(Math.random() * myVar.length);
+		document.getElementById("loader").src = myVar[randomNum];
+		myVar = setTimeout(showPage, 2000);
+
+	}
+	function showPage() {
+		document.getElementById("loader").style.display = "none";
+		document.getElementById("myDiv").style.display = "block";
+	}
+</script>
